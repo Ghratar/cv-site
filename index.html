@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alexandru Ilie · QA automation tester</title>
+<meta name="description" content="Alexandru Ilie, QA automation tester (Playwright, JavaScript). A CV that runs as a test suite. Break it and watch the tests catch it.">
+<meta name="theme-color" content="#0d5c3a">
+<link rel="icon" id="favicon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d5c3a'/%3E%3Cpath d='M8 17l5.5 5.5L24 10' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-status="passed">
+
+<a class="skip" href="#report" data-fr="Aller au rapport de tests">Skip to the test report</a>
+
+<header class="bar">
+  <span class="file">alexandru.spec.ts</span>
+  <span class="summary" id="summary" aria-live="polite">20 passed · 1 flaky · 1 skipped</span>
+  <button class="btn small" id="fix" hidden data-fr="Corriger le bug">Fix the bug</button>
+  <button class="btn small ghost" id="rerun" data-fr="Relancer">Run again</button>
+  <button class="btn small ghost" id="lang" lang="fr" aria-label="FR, passer en français">FR</button>
+</header>
+
+<main id="main">
+
+<section class="hero" id="hero">
+  <h1 id="name" data-expected="Alexandru Ilie">Alexandru Ilie</h1>
+  <p class="lede" data-fr="Testeur QA automatisation. J'écris des suites de tests Playwright en JavaScript, et j'ai passé près de deux ans à tester des applications web dans une équipe à distance. Basé à Dijon, en télétravail.">QA automation tester. I write Playwright test suites in JavaScript, and I spent nearly two years testing web applications in a remote team. Based in Dijon, working remotely.</p>
+  <p class="verdict" id="verdict">Every claim on this page is a test, and right now they all pass.</p>
+
+  <div class="actions" id="actions">
+    <a class="btn" id="contact" href="mailto:alexandru.ilie.eu@gmail.com" data-fr="M'écrire">Email me</a>
+    <a class="btn ghost" href="CV_Alexandru_Ilie_FR.pdf" download data-fr="Télécharger le CV (PDF)">Download the CV (PDF, French)</a>
+    <div class="cookie" id="cookie" hidden>
+      <p data-fr="Nous respectons votre vie privée. Nos 847 partenaires aussi.">We value your privacy. So do our 847 partners.</p>
+      <div class="cookie-actions">
+        <button type="button" class="cookie-accept" id="cookie-accept" data-fr="Tout accepter">Accept all</button>
+        <button type="button" class="cookie-reject" id="cookie-reject" data-fr="Refuser">Reject</button>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="motion-toggle" id="motion" aria-pressed="false" hidden><span class="off" data-fr="Les animations sont coupées, comme le demande votre système. Les activer pour cette page.">Animations are off, as your system asks. Turn them on for this page.</span><span class="on" data-fr="Les animations sont activées pour cette page. Les couper.">Animations are on for this page. Turn them off.</span></button>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="track" id="track"><span>PASSED<i></i></span><span>PASSED<i></i></span><span>PASSED<i></i></span><span>PASSED<i></i></span><span>PASSED<i></i></span><span>PASSED<i></i></span><span>PASSED<i></i></span><span>PASSED<i></i></span><span>PASSED<i></i></span><span>PASSED<i></i></span><span>PASSED<i></i></span><span>PASSED<i></i></span></div></div>
+
+<section class="lab" aria-labelledby="lab-title">
+  <h2 id="lab-title" data-fr="Allez-y, cassez quelque chose.">Go on, break something.</h2>
+  <p data-fr="Introduisez un bug dans cette page. La suite se relance sur le vrai DOM et vous dit ce qu'elle a trouvé.">Ship a bug into this page. The suite reruns against the real DOM and tells you what it found.</p>
+  <div class="bugs">
+    <button class="bug" data-bug="typo" aria-pressed="false">
+      <strong data-fr="Écorcher mon nom">Misspell my name</strong>
+      <span data-fr="Une faute d'une lettre dans le titre.">A one-letter typo in the heading.</span>
+    </button>
+    <button class="bug" data-bug="runaway" aria-pressed="false">
+      <strong data-fr="Perdre le bouton de contact">Lose the contact button</strong>
+      <span data-fr="Il sort de son conteneur et esquive le curseur.">It drifts out of its container and dodges the cursor.</span>
+    </button>
+    <button class="bug" data-bug="cookie" aria-pressed="false">
+      <strong data-fr="Ajouter un bandeau cookies">Add a cookie banner</strong>
+      <span data-fr="Il atterrit pile sur le bouton de contact.">It lands right on top of the contact button.</span>
+    </button>
+    <button class="bug" data-bug="layout" aria-pressed="false">
+      <strong data-fr="Saccager la mise en page">Wreck the layout</strong>
+      <span data-fr="Les lignes penchent et se chevauchent.">Rows tilt and slide over each other.</span>
+    </button>
+    <button class="bug" data-bug="contrast" aria-pressed="false">
+      <strong data-fr="Tuer le contraste">Kill the contrast</strong>
+      <span data-fr="L'intro se fond dans l'arrière-plan.">The intro fades into the background.</span>
+    </button>
+    <button class="bug" data-bug="flip" aria-pressed="false">
+      <strong data-fr="Retourner la page">Flip the page</strong>
+      <span data-fr="Tout ce qui est sous la barre se retrouve à l'envers.">Everything below the bar turns upside down.</span>
+    </button>
+    <button class="bug chaos" id="chaos" aria-pressed="false">
+      <strong data-fr="Lâcher le chaos monkey">Release the chaos monkey</strong>
+      <span data-fr="Les six d'un coup.">All six at once.</span>
+    </button>
+  </div>
+</section>
+
+<section class="report" id="report" aria-labelledby="report-title">
+  <h2 id="report-title" data-fr="Le rapport">The report</h2>
+
+  <div class="suite">
+    <h3 data-fr="cette page">this page</h3>
+    <details class="row" data-final="pass" data-check="name">
+      <summary><span class="mark"></span><span class="title" data-fr="affiche correctement mon nom">renders my name correctly</span><span class="dur"></span></summary>
+      <div class="evidence"><p data-fr="Lit le titre dans le DOM et le compare à la chaîne attendue.">Reads the heading from the DOM and compares it with the expected string.</p><pre class="diff" hidden></pre></div>
+    </details>
+    <details class="row" data-final="pass" data-check="contact">
+      <summary><span class="mark"></span><span class="title" data-fr="garde le bouton de contact dans son conteneur">keeps the contact button inside its container</span><span class="dur"></span></summary>
+      <div class="evidence"><p data-fr="Mesure le bouton et son conteneur, et vérifie que l'un est bien dans l'autre.">Measures the button and its container and checks one sits inside the other.</p><pre class="diff" hidden></pre></div>
+    </details>
+    <details class="row" data-final="pass" data-check="cover">
+      <summary><span class="mark"></span><span class="title" data-fr="ne laisse rien recouvrir le bouton de contact">leaves the contact button uncovered</span><span class="dur"></span></summary>
+      <div class="evidence"><p data-fr="Compare la boîte du bouton avec chaque élément positionné de l'en-tête.">Compares the button's box with every positioned element in the header.</p><pre class="diff" hidden></pre></div>
+    </details>
+    <details class="row" data-final="pass" data-check="layout">
+      <summary><span class="mark"></span><span class="title" data-fr="dispose chaque ligne sans transformation">lays out every row without a transform</span><span class="dur"></span></summary>
+      <div class="evidence"><p data-fr="Lit la transformation calculée de chaque ligne de ce rapport.">Reads the computed transform of each row in this report.</p><pre class="diff" hidden></pre></div>
+    </details>
+    <details class="row" data-final="pass" data-check="contrast">
+      <summary><span class="mark"></span><span class="title" data-fr="garde l'intro lisible, avec un contraste d'au moins 4,5:1">keeps the intro readable at 4.5:1 contrast or better</span><span class="dur"></span></summary>
+      <div class="evidence"><p data-fr="Calcule le ratio de contraste WCAG entre le texte d'intro et le fond de la page.">Computes the WCAG contrast ratio between the intro text and the page background.</p><pre class="diff" hidden></pre></div>
+    </details>
+    <details class="row" data-final="pass" data-check="upright">
+      <summary><span class="mark"></span><span class="title" data-fr="garde la page à l'endroit">keeps the page the right way up</span><span class="dur"></span></summary>
+      <div class="evidence"><p data-fr="Lit la transformation calculée de l'élément principal.">Reads the computed transform of the main element.</p><pre class="diff" hidden></pre></div>
+    </details>
+  </div>
+
+  <div class="suite">
+    <h3 data-fr="expérience">experience</h3>
+    <details class="row" data-final="pass">
+      <summary><span class="mark"></span><span class="title" data-fr="QA Specialist chez International Online Solutions, Bucarest">QA Specialist at International Online Solutions, Bucharest</span><span class="dur" data-fr="1 an 11 mois">1 yr 11 mo</span></summary>
+      <div class="evidence">
+        <p data-fr="Septembre 2023 à juillet 2025, à distance.">September 2023 to July 2025, remote.</p>
+        <ul>
+          <li data-fr="Écriture et maintenance de tests automatisés Playwright sur les parcours critiques des applications.">Wrote and maintained automated Playwright tests on the critical journeys of the applications.</li>
+          <li data-fr="Remplacement de tests manuels répétitifs par de l'automatisation pour accélérer les cycles de non-régression.">Replaced repetitive manual checks with automation to shorten regression cycles.</li>
+          <li data-fr="Formation et accompagnement de trois nouveaux testeurs, en tant que membre le plus expérimenté de l'équipe.">Trained and onboarded three new testers as the most experienced member of the team.</li>
+          <li data-fr="Tests manuels et exploratoires sur les scénarios complexes, hors périmètre de l'automatisation.">Ran manual and exploratory tests on the complex scenarios automation did not cover.</li>
+          <li data-fr="Collaboration avec les développeurs et les product managers pour prioriser et résoudre les anomalies.">Worked with developers and product managers to prioritise and resolve defects.</li>
+        </ul>
+      </div>
+    </details>
+    <details class="row" data-final="pass">
+      <summary><span class="mark"></span><span class="title" data-fr="Agent de support chez International Online Solutions, Bucarest">Support Agent at International Online Solutions, Bucharest</span><span class="dur" data-fr="3 mois">3 mo</span></summary>
+      <div class="evidence"><p data-fr="Juillet à septembre 2023. Premier poste dans l'entreprise, avant une évolution interne vers l'équipe QA.">July to September 2023. First role at the company, before moving internally to the QA team.</p></div>
+    </details>
+    <details class="row" data-final="pass">
+      <summary><span class="mark"></span><span class="title" data-fr="Junior Analyst, LQA (français), chez PTW, Pole To Win, Bucarest">Junior Analyst, linguistic QA (French), at PTW, Pole To Win, Bucharest</span><span class="dur" data-fr="4 mois">4 mo</span></summary>
+      <div class="evidence"><p data-fr="Avril à juillet 2023. Contrôle qualité linguistique en français sur des jeux vidéo, et accompagnement des nouveaux collègues.">April to July 2023. French language quality control on video games, and onboarding of new colleagues.</p></div>
+    </details>
+  </div>
+
+  <div class="suite">
+    <h3 data-fr="compétences">skills</h3>
+    <details class="row" data-final="pass">
+      <summary><span class="mark"></span><span class="title" data-fr="automatise les tests avec Playwright">automates tests with Playwright</span><span class="dur" data-fr="quotidien">daily</span></summary>
+      <div class="evidence"><p data-fr="Suites de non-régression, tests exploratoires, et tests manuels quand l'automatisation n'est pas rentable. J'ai aussi appris Cypress, sans l'avoir encore utilisé sur un vrai projet.">Regression suites, exploratory testing, and manual testing where automation does not pay off. I have also learned Cypress, but not yet used it on a real project.</p></div>
+    </details>
+    <details class="row" data-final="pass">
+      <summary><span class="mark"></span><span class="title" data-fr="écrit du JavaScript, du C#, du HTML et du CSS">writes JavaScript, C#, HTML and CSS</span><span class="dur" data-fr="4 langages">4 langs</span></summary>
+      <div class="evidence"><p data-fr="JavaScript est le langage de travail des suites de tests. Cette page est en HTML, CSS et JavaScript, sans framework.">JavaScript is the working language for the test suites. This page is plain HTML, CSS and JavaScript with no framework.</p></div>
+    </details>
+    <details class="row" data-final="pass">
+      <summary><span class="mark"></span><span class="title" data-fr="travaille avec GraphQL, Git et Jira">works with GraphQL, Git and Jira</span><span class="dur" data-fr="3 outils">3 tools</span></summary>
+      <div class="evidence"><p data-fr="Vérifications au niveau de l'API, gestion de versions, et suivi des anomalies du signalement jusqu'à la correction validée.">API-level checks, version control, and defect tracking from report to verified fix.</p></div>
+    </details>
+  </div>
+
+  <div class="suite">
+    <h3 data-fr="projets">side projects</h3>
+    <details class="row" data-final="pass">
+      <summary><span class="mark"></span><span class="title" data-fr="a conçu et mis en ligne le site d'une association">designed and launched the website of an association</span><span class="dur" data-fr="depuis 2025">since 2025</span></summary>
+      <div class="evidence"><p data-fr="Asociația de Terapii Integrative „Sfântul Nectarie” (&lt;a href=&quot;https://atiaria.org&quot;&gt;atiaria.org&lt;/a&gt;) : formulaire de contact, page événements, documents téléchargeables, et participation à sa communication en ligne.">Asociația de Terapii Integrative „Sfântul Nectarie” (<a href="https://atiaria.org">atiaria.org</a>): contact form, events page, downloadable documents, and help with its online communication.</p></div>
+    </details>
+    <details class="row" data-final="pass">
+      <summary><span class="mark"></span><span class="title" data-fr="contribue à des méta-analyses en oncologie">contributes to meta-analyses in oncology research</span><span class="dur" data-fr="depuis 2025">since 2025</span></summary>
+      <div class="evidence"><p data-fr="Deux travaux publiés. Un troisième sera présenté à Londres en décembre 2026.">Two papers published. A third will be presented in London in December 2026.</p></div>
+    </details>
+    <details class="row" data-final="pass">
+      <summary><span class="mark"></span><span class="title" data-fr="a effectué un stage hospitalier au CHU Dijon">completed a hospital internship at CHU Dijon</span><span class="dur" data-fr="2 mois">2 mo</span></summary>
+      <div class="evidence"><p data-fr="Juillet à août 2022.">July to August 2022.</p></div>
+    </details>
+  </div>
+
+  <div class="suite">
+    <h3 data-fr="langues">languages</h3>
+    <details class="row" data-final="pass">
+      <summary><span class="mark"></span><span class="title" data-fr="parle roumain">speaks Romanian</span><span class="dur" data-fr="natif">native</span></summary>
+      <div class="evidence"><p data-fr="Langue maternelle.">Mother tongue.</p></div>
+    </details>
+    <details class="row" data-final="pass">
+      <summary><span class="mark"></span><span class="title" data-fr="travaille en français">works in French</span><span class="dur">C1</span></summary>
+      <div class="evidence"><p data-fr="Section bilingue français au lycée, et la vie quotidienne à Dijon.">Bilingual French section at school, and daily life in Dijon.</p></div>
+    </details>
+    <details class="row" data-final="pass">
+      <summary><span class="mark"></span><span class="title" data-fr="travaille en anglais">works in English</span><span class="dur">C1</span></summary>
+      <div class="evidence"><p data-fr="La langue de la plupart des outils et de la documentation.">The working language of this page and of most of the tooling.</p></div>
+    </details>
+    <details class="row" data-final="flaky">
+      <summary><span class="mark"></span><span class="title" data-fr="tient une conversation en allemand">holds a conversation in German</span><span class="dur">B1</span></summary>
+      <div class="evidence"><p data-fr="Instable. Passe à la deuxième tentative, lentement.">Flaky. Passes on retry, slowly.</p></div>
+    </details>
+  </div>
+
+  <div class="suite">
+    <h3 data-fr="formation">education</h3>
+    <details class="row" data-final="skip">
+      <summary><span class="mark"></span><span class="title" data-fr="est titulaire d'une licence d'informatique">holds a computer science degree</span><span class="dur" data-fr="ignoré">skipped</span></summary>
+      <div class="evidence"><p data-fr="En cours : première année de licence d'informatique à l'Université Paris 8 Vincennes – Saint-Denis, depuis septembre 2024.">In progress: first year of the computer science licence at Université Paris 8 Vincennes – Saint-Denis, since September 2024.</p></div>
+    </details>
+    <details class="row" data-final="pass">
+      <summary><span class="mark"></span><span class="title" data-fr="a suivi une année de médecine à Arad">studied one year of medicine in Arad</span><span class="dur" data-fr="1 an">1 yr</span></summary>
+      <div class="evidence"><p data-fr="Université de l'Ouest « Vasile Goldiș », octobre 2021 à août 2022.">Universitatea de Vest „Vasile Goldiș”, October 2021 to August 2022.</p></div>
+    </details>
+    <details class="row" data-final="pass">
+      <summary><span class="mark"></span><span class="title" data-fr="a obtenu le baccalauréat scientifique avec mention">passed the scientific baccalaureate with honours</span><span class="dur">2021</span></summary>
+      <div class="evidence"><p data-fr="Section bilingue français, Lycée Alexandru Odobescu.">Bilingual French section, Lycée Alexandru Odobescu.</p></div>
+    </details>
+  </div>
+</section>
+
+<section class="close">
+  <h2 data-fr="Tout est au vert. Prêt à rejoindre votre équipe.">Green across the board. Ready to merge into your team.</h2>
+  <p data-fr="Disponible immédiatement pour un poste à temps plein en automatisation QA, en télétravail, partout dans l'UE.">Available now for full-time remote work in QA automation, from anywhere in the EU.</p>
+  <div class="actions">
+    <a class="btn" href="mailto:alexandru.ilie.eu@gmail.com">alexandru.ilie.eu@gmail.com</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/alexandru-ilie-921731164">LinkedIn</a>
+    <a class="btn ghost" href="https://github.com/Ghratar">GitHub</a>
+  </div>
+  <p class="keys" data-fr="Au clavier : &lt;kbd&gt;B&lt;/kbd&gt; casse quelque chose, &lt;kbd&gt;F&lt;/kbd&gt; répare, &lt;kbd&gt;R&lt;/kbd&gt; relance la suite, &lt;kbd&gt;L&lt;/kbd&gt; change de langue.">Keyboard: <kbd>B</kbd> breaks something, <kbd>F</kbd> fixes it, <kbd>R</kbd> reruns the suite, <kbd>L</kbd> switches language.</p>
+</section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "cv-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Alexandru Ilie's CV as a live test report, with a Playwright suite that tests it.",
+  "scripts": {
+    "serve": "http-server . -p 4173 -c-1 --silent",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:chromium": "playwright test --project=chromium",
+    "report": "playwright show-report",
+    "test:local": "playwright test --project=chromium --project=webkit --project=mobile",
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.6",
+    "http-server": "^14.1.1",
+    "typescript": "^7.0.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
