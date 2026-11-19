@@ -99,7 +99,8 @@ h2 { font-size: clamp(1.9rem, 4.6vw, 3.25rem); font-weight: 800; line-height: 1.
 
 /* Report */
 .report { width: var(--wrap); margin: 0 auto; padding: clamp(3rem, 7vw, 5rem) 0 1rem; }
-.report h2 { margin-bottom: 2rem; }
+.report h2 { margin-bottom: 0.75rem; }
+.proof { color: var(--soft); max-width: 62ch; margin: 0 0 2.25rem; }
 .suite { margin-bottom: 2.5rem; }
 .suite h3 { font: 700 0.875rem/1 var(--mono); color: var(--soft); margin: 0 0 0.6rem; padding-left: 0.75rem; }
 .suite h3::before { content: "describe('"; }

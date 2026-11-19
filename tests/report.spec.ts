@@ -63,7 +63,8 @@ test.describe('contact details', () => {
 
     await expect(cv.contactButton).toHaveAttribute('href', 'mailto:alexandru.ilie.eu@gmail.com');
     await expect(page.getByRole('link', { name: 'LinkedIn' })).toHaveAttribute('href', 'https://www.linkedin.com/in/alexandru-ilie-921731164');
-    await expect(page.getByRole('link', { name: 'GitHub' })).toHaveAttribute('href', 'https://github.com/Ghratar');
+    await expect(page.getByRole('link', { name: 'GitHub', exact: true })).toHaveAttribute('href', 'https://github.com/Ghratar');
+    await expect(page.getByRole('link', { name: /latest run are on GitHub/ })).toHaveAttribute('href', 'https://github.com/Ghratar/cv-site');
   });
 
   test('the CV download is a real PDF', async ({ page, request }) => {
